@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Monuments</h1>
+ <div class="row">
+    <div class="col" data-controller="insert">
+      <div id="monuments" data-insert-target="list">
+        <% @monuments.each do |monument| %>
+          <%= render monument %>
+        <% end %>
+      </div>
+      <div data-controller="toggle">
+        <%#= link_to "New monument", new_monument_path, class: "btn btn-secondary" %>
+        <button data-action="click->toggle#display" class="btn btn-secondary">New Monument</button>
+        <div class="d-none mt-5" data-toggle-target="form">
+          <%= render "form", monument: @monument %>
+        </div>
+      </div>
+  </div>
+</div>
