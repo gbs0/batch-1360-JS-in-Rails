@@ -19,7 +19,5 @@ export default class extends Controller {
     this.formTarget.reset()
   }
 
-  connect() {
-    console.log(this.formTarget)
-  }
+  connect() {}
 }
